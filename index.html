@@ -1,0 +1,195 @@
+<!doctype html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Rodrigo Travel Agency</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- <img src="" alt="Logo rodrigo viagens"> -->
+            <p>Rodrigo Travel Agency</p>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pacotes">Pacotes</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div id="home" class="header-content">
+            <h1>Switzerland</h1>
+            <p> Embarque nessa experiencia Fantástica.</p>
+            <button>Saiba mais</button>
+        </div>
+    </header>
+
+    <section id="pacotes" class="pacotes">
+        <h1 class="pacotes-title"> Conheça nossos Pacotes </h1>
+
+        <div class="pacotes-cards">
+
+            <div class="card">
+                <div class="card-tag card-tag-top">
+                    <p>PROMOÇÃO</p>
+                </div>
+
+                <div class="card-tag card-tag-bottom">
+                    <p>R$1500,00</p>
+                </div>
+
+                <img class="card-image" id="miami">
+                <div class="card-content">
+                    <h2>Miami</h2>
+                    <h1>Pacote 5 noites Hotel Premium </h1>
+                    <ul>
+                        <li><i data-feather="coffee"></i> café da manhâ incluso</li>
+                        <li><i data-feather="wifi"></i> Wifi </li>
+                        <li><i data-feather="briefcase"></i> entrega de mala </li>
+                    </ul>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-tag card-tag-bottom">
+                    <p>R$1900,00</p>
+                </div>
+
+                <img class="card-image" id="italia">
+                <div class="card-content">
+                    <h2>Italia</h2>
+                    <h1>Pacote 7 noites Hotel Premium </h1>
+                    <ul>
+                        <li><i data-feather="coffee"></i> café da manhâ incluso</li>
+                        <li><i data-feather="wifi"></i> Wifi </li>
+                        <li><i data-feather="briefcase"></i> entrega de mala </li>
+                    </ul>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-tag card-tag-top">
+                    <p>PROMOÇÃO</p>
+                </div>
+
+                <div class="card-tag card-tag-bottom">
+                    <p>R$2100,00</p>
+                </div>
+
+                <img class="card-image" id="china">
+                <div class="card-content">
+                    <h2>China</h2>
+                    <h1>Pacote 5 noites Hotel Premium </h1>
+                    <ul>
+                        <li><i data-feather="coffee"></i> café da manhâ incluso</li>
+                        <li><i data-feather="wifi"></i> Wifi </li>
+                        <li><i data-feather="briefcase"></i> entrega de mala </li>
+                    </ul>
+                    <p></p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="servicos" class="servicos">
+        <h1 class="servicos-title">Serviços</h1>
+        <div class="servicos-cards">
+            <div class="card">
+                <i data-feather="map"></i>
+                <div class="card-content">
+                    <h3>tours Guiados</h3>
+                    <p>lorem ipsum dolor sit amet consectetur adipiscing elit scelerisque ante ex aliquam porttitor faucibus montes facilisis nec dapibus nam sagittis porta id proin platea feugiat mattis litora class libero vitae</p>
+                </div>
+                <button>Saiba Mais</button>
+            </div>
+
+            <div class="card">
+                <i data-feather="camera"></i>
+                <div class="card-content">
+                    <h3>Fotos profissional</h3>
+                    <p>lorem ipsum dolor sit amet consectetur adipiscing elit scelerisque ante ex aliquam porttitor faucibus montes facilisis nec dapibus nam sagittis porta id proin platea feugiat mattis litora class libero vitae</p>
+                </div>
+                <button>Saiba Mais</button>
+            </div>
+
+            <div class="card">
+                <i data-feather="navigation"></i>
+                <div class="card-content">
+                    <h3>Aluguel de Veiculo</h3>
+                    <p>lorem ipsum dolor sit amet consectetur adipiscing elit scelerisque ante ex aliquam porttitor faucibus montes facilisis nec dapibus nam sagittis porta id proin platea feugiat mattis litora class libero vitae</p>
+                </div>
+                <button>Saiba Mais</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contato" class="contato">
+        <div class="contato-card">
+
+            <h1>contato</h1>
+            <ul>
+                <li><i data-feather="map"></i> Rua Jussara, 1635</li>
+                <li><i data-feather="map"></i> contato@TravelAgency.com</li>
+                <li><i data-feather="map"></i> +55 (11) 9 1234-5678</li>
+            </ul>
+        </div>
+        <div id="map"></div>
+
+    </section>
+
+    <script>
+        // icons
+        feather.replace();
+
+        // rolagem suave do menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // maps
+        function initMap() {
+            // The location of Uluru
+            const uluru = {
+                lat: -23.510336330266423,
+                lng: -46.81913651534647
+
+            };
+            // The map, centered at Uluru
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 4,
+                center: uluru,
+            });
+            // The marker, positioned at Uluru
+            const marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+            });
+        }
+    </script>
+
+    <script async src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+    </script>
+
+</body>
+
+</html>

@@ -6,7 +6,7 @@ Criado para consolidação de técnicas em CSS e HTML.
 
 
 
-Pagina principal de uma loja de tênis jordan.
+Pagina principal de uma agencia de viagem
 
 
 
